@@ -70,8 +70,12 @@ if (!isset($_SESSION['loginuser'])) {
               method="post"
               action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <h3 style="text-align: center">Login</h3>
-            <!--    Error Message    -->
-            <h5 style="color: red; text-align: center;"><?= $msgErr; ?></h5>
+            <!-- Hide h5 (msg Error) if empty -->
+            <?php
+            if(!empty($msgErr)){
+            echo "<h5 style='text-align: center;color: red;' >" . $msgErr . "</h5>";
+            }
+            ?>
             <input class="form-input" type="text" name="txt_name" placeholder="Your name"><br>
             <input class="form-input" type="password" name="txt_pass" placeholder="Your password"><br>
             <button class="form-btn" type="submit" name="btn_submit">Login</button>
