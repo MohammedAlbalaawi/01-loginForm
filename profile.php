@@ -1,8 +1,8 @@
 <?php
-require_once "conn.php";
+require_once 'conn.php';
 
 $id = $_GET['id'];
-$dbData = mysqli_query($conn,"select * from users where id='$id'");
+$dbData = mysqli_query($conn, "select * from users where id='$id'");
 
 while ($row = mysqli_fetch_array($dbData)) {
     ?>
