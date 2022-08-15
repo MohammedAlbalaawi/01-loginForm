@@ -16,6 +16,8 @@ while ($row = mysqli_fetch_array($dbData)) {
 ?>
 <html>
 <head><link rel="stylesheet" href="style.css"></head>
-<body></body>
+<body>
+<a href="logout.php">LOGOUT</a>
+</body>
 </html>
 
